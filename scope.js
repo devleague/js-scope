@@ -17,20 +17,49 @@ function outerFunction() {
 
   function innerFunction() {
     var world = 'World';
-    return /* answer here */;
+    return;
   }
   innerFunction();
 }
 
+// What is the return value of the sushiRestaurant function when executed?
+// Fill your answer in the 'sushiRestaurantReturnValue' variable
+function sushiRestaurant() {
+  var belt = [];
+  var fish = 'Hamachi'
 
-// This is a function that takes in a 2d-array (or matrix) and returns the sum of all elements
+
+  var makeRice = function() {
+    return 'brownRice';
+  }
+
+  fish = 'Ahi'
+
+  function makeSushi(ingredient1, ingredient2) {
+    return ingredient1 + ' ' + ingredient2
+  }
+
+  makeRice = function() {
+    return 'whiteRice'
+  }
+
+  belt.push( makeSushi( makeRice(), fish ) );
+  belt.push( makeSushi( makeRice(), fish ) );
+
+  return belt
+}
+
+let sushiRestaurantReturnValue = /* Your answer here */
+
+
+// This is a function that takes in a 2d-array (or matrix) and returns the sum of all elements.
 // It's broken due to count variables colliding into each other.  Fix it!
 function addMatrixElements(matrix) {
 
   var result = 0;
 
   for(var i = 0; i < matrix.length; i++) {
-    /* fix counter variables in the second loop */
+    /* fix counter variables in this nested loop */
     for(var i = 0; i < matrix[i].length; i++) {
       result = result + matrix[i][i];
     }
@@ -49,6 +78,7 @@ function sendDataToClient() {
   }
 
   function authenticateUser(obj, username) {
+
     var userObject = {
       handle: 'morpheus',
       authenticated: false
