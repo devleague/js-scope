@@ -1,3 +1,4 @@
+// Functions can acces variables outside of its own scope.
 // Fill in the closeLid and openLid functions to set the isCookieJarOpen variable to false or true respectively.
 var isCookieJarOpen = null;
 
@@ -17,17 +18,18 @@ function outerFunction() {
 
   function innerFunction() {
     var world = 'World';
-    return;
+    return /* Your answer here */;
   }
   innerFunction();
 }
 
+// Make sure you take hoisting into account for this problem!
 // What is the return value of the sushiRestaurant function when executed?
-// Fill your answer in the 'sushiRestaurantReturnValue' variable
+// Fill your answer in the 'sushiRestaurantReturnValue' variable below
 function sushiRestaurant() {
+
   var belt = [];
   var fish = 'Hamachi'
-
 
   var makeRice = function() {
     return 'brownRice';
