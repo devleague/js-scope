@@ -1,3 +1,4 @@
+// Functions can acces variables outside of its own scope.
 // Fill in the closeLid and openLid functions to set the isCookieJarOpen variable to false or true respectively.
 var isCookieJarOpen = null;
 
@@ -17,20 +18,50 @@ function outerFunction() {
 
   function innerFunction() {
     var world = 'World';
-    return /* answer here */;
+    return /* Your answer here */;
   }
   return innerFunction();
 }
 
+// Make sure you take hoisting into account for this problem!
+// What is the return value of the sushiRestaurant function when executed?
+// Fill your answer in the 'sushiRestaurantReturnValue' variable below
+function sushiRestaurant() {
 
-// This is a function that takes in a 2d-array (or matrix) and returns the sum of all elements
+  var belt = [];
+  var fish = 'Hamachi'
+
+  var makeRice = function() {
+    return 'brownRice';
+  }
+
+  fish = 'Ahi'
+
+  function makeSushi(ingredient1, ingredient2) {
+    return ingredient1 + ' ' + ingredient2
+  }
+
+  makeRice = function() {
+    return 'whiteRice'
+  }
+
+  belt.push( makeSushi( makeRice(), fish ) );
+  belt.push( makeSushi( makeRice(), fish ) );
+
+  return belt
+}
+
+let sushiRestaurantReturnValue = /* Your answer here */
+
+
+// This is a function that takes in a 2d-array (or matrix) and returns the sum of all elements.
 // It's broken due to count variables colliding into each other.  Fix it!
 function addMatrixElements(matrix) {
 
   var result = 0;
 
   for(var i = 0; i < matrix.length; i++) {
-    /* fix counter variables in the second loop */
+    /* fix counter variables in this nested loop */
     for(var i = 0; i < matrix[i].length; i++) {
       result = result + matrix[i][i];
     }
@@ -49,6 +80,7 @@ function sendDataToClient() {
   }
 
   function authenticateUser(obj, username) {
+
     var userObject = {
       handle: 'morpheus',
       authenticated: false
