@@ -17,7 +17,7 @@ function outerFunction() {
 
   function innerFunction() {
     var world = 'World';
-    return /* answer here */;
+    return hello + " " + world ;
   }
   return innerFunction();
 }
