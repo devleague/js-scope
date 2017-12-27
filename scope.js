@@ -2,11 +2,13 @@
 var isCookieJarOpen = null;
 
 function closeLid() {
-  /* answer here */
-}
+  isCookieJarOpen = false;
+  return isCookieJarOpen;
+};  
 
 function openLid() {
-  /* answer here */
+  isCookieJarOpen = true;
+  return isCookieJarOpen;
 }
 
 
@@ -17,7 +19,7 @@ function outerFunction() {
 
   function innerFunction() {
     var world = 'World';
-    return /* answer here */;
+    return hello + ' ' + world;
   }
   return innerFunction();
 }
@@ -31,8 +33,8 @@ function addMatrixElements(matrix) {
 
   for(var i = 0; i < matrix.length; i++) {
     /* fix counter variables in the second loop */
-    for(var i = 0; i < matrix[i].length; i++) {
-      result = result + matrix[i][i];
+    for(var n = 0; n < matrix[i].length; n++) {
+      result = result + matrix[i][n];
     }
   }
   return result;
@@ -54,9 +56,9 @@ function sendDataToClient() {
       authenticated: false
     };
 
-    if (userObject.handle === username) {
-      userObject.authenticated = true;
-      return userObject
+    if (obj.handle === username) {
+      obj.authenticated = true;
+      return obj
     } else {
       return userObject
     }
